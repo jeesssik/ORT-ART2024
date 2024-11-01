@@ -906,62 +906,47 @@ body {
     linear,
     right top,
     left bottom,
-    from(#00a0ff),
-    color-stop(#2b9cfb),
-    color-stop(#3d98f7),
-    color-stop(#4b94f3),
-    color-stop(#5690ef),
-    color-stop(#5e8deb),
-    color-stop(#6689e7),
-    color-stop(#6c86e3),
-    color-stop(#7382de),
-    color-stop(#787ed9),
-    color-stop(#7d7ad3),
-    to(#8276ce)
-  );
-  background-image: -webkit-linear-gradient(
+    from(#ff007f), /* Rosa vibrante */
+    color-stop(#ff00e5), /* Rosa neón */
+    color-stop(#00d4ff), /* Azul claro */
+    color-stop(#00bfff), /* Azul brillante */
+    color-stop(#00ff80), /* Verde neón */
+    color-stop(#ffcc00), /* Amarillo neón */
+    color-stop(#ff3300), /* Rojo intenso */
+    to(#ff007f) /* Vuelve al rosa vibrante */
+);
+background-image: -webkit-linear-gradient(
     right top,
-    #00a0ff,
-    #2b9cfb,
-    #3d98f7,
-    #4b94f3,
-    #5690ef,
-    #5e8deb,
-    #6689e7,
-    #6c86e3,
-    #7382de,
-    #787ed9,
-    #7d7ad3,
-    #8276ce
-  );
-  background-image: -o-linear-gradient(
+    #ff007f,
+    #ff00e5,
+    #00d4ff,
+    #00bfff,
+    #00ff80,
+    #ffcc00,
+    #ff3300,
+    #ff007f
+);
+background-image: -o-linear-gradient(
     right top,
-    #00a0ff,
-    #2b9cfb,
-    #3d98f7,
-    #4b94f3,
-    #5690ef,
-    #5e8deb,
-    #6689e7,
-    #6c86e3,
-    #7382de,
-    #787ed9,
-    #7d7ad3,
-    #8276ce
-  );
-  background-image: linear-gradient(
+    #ff007f,
+    #ff00e5,
+    #00d4ff,
+    #00bfff,
+    #00ff80,
+    #ffcc00,
+    #ff3300,
+    #ff007f
+);
+background-image: linear-gradient(
     to left bottom,
-    #00a0ff,
-    #2b9cfb,
-    #3d98f7,
-    #4b94f3,
-    #5690ef,
-    #5e8deb,
-    #6689e7,
-    #6c86e3,
-    #7382de,
-    #787ed9,
-    #7d7ad3,
-    #8276ce
-  );
+    #ff007f,
+    #ff00e5,
+    #00d4ff,
+    #00bfff,
+    #00ff80,
+    #ffcc00,
+    #ff3300,
+    #ff007f
+);
+
 }
