@@ -1,2 +1,0 @@
-import "./AnimateTimeLineItems";
-import "./smoothScroll"
