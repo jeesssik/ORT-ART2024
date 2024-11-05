@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>ORT ART FESTIVAL</title>
   <link rel="stylesheet" href="./styles/main.css" />
-
+  <link rel="stylesheet" href="./styles/background.css" />
   <script>
     window.onload = function () {
       fetchTSV();
@@ -67,8 +67,12 @@
   </script>
 
 </head>
-<body>
-  <div class="header">
+<body >
+
+
+  <div class="fixed-background"></div>
+  <div class="content">
+  <div class="header content">
     <div class="header__wrapper">
       <p class="header__location">AUDITORIO RIO</p>
       <p class="header__title" data-text="ORT ART">ORT ART</p>
@@ -91,206 +95,9 @@
   <div class="footer">
     <p class="footer__copyright">ORT ART 2024.</p>
   </div>
-
+  </div>
   <script src="./scripts/bundle.js"></script>
 
 </body>
 </html>
 
-
---------------------------------------
-<!-- 
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>ORT ART FESTIVAL</title>
-    <link rel="stylesheet" href="./styles/main.css" />
-  </head>
-  <body>
-    <div class="header">
-      <div class="header__wrapper">
-        <p class="header__location">AUDITORIO RIO</p>
-        <p class="header__title" data-text="ORT ART">ORT ART</p>
-        <p class="header__date">7 de Noviembre</p>
-      </div>
-    </div>
-    <div class="road-map">
-      <div class="time-line">
-        <div class="time-line__header">
-          <span class="time-line__stage time-line__stage--left"
-            >Escenario 1</span
-          >
-          <span class="time-line__stage time-line__stage--right"
-            >Escenario 2</span
-          >
-        </div>
-
-        <ul class="time-line__list">
-          <li class="time-line__item time-line__item--left">
-            
-            <div class="time-line__musical-group-wrapper">
-              <p class="time-line__time-performance">22:15 - 23:45</p>
-              <p class="time-line__music-group">Mogwai</p>
-              <p class="time-line__official-cite">
-                <a href="#">Integrantes</a>
-              </p>
-              <p class="time-line__mobile-stage">Escenario 1</p>
-            </div>
-          </li>
-          <li class="time-line__item time-line__item--right">
-            
-            <div class="time-line__musical-group-wrapper">
-              <p class="time-line__time-performance">22:15 - 23:45</p>
-              <p class="time-line__music-group">Sirgus Ros</p>
-              <p class="time-line__official-cite">
-                <a href="#">Integrantes</a>
-              </p>
-              <p class="time-line__mobile-stage">Other stage</p>
-            </div>
-          </li>
-
-          <li class="time-line__item time-line__item--left">
-            
-            <div class="time-line__musical-group-wrapper">
-              <p class="time-line__time-performance">22:15 - 23:45</p>
-              <p class="time-line__music-group">Explosion in The Sky</p>
-              <p class="time-line__official-cite">
-                <a href="#">Integrantes</a>
-              </p>
-              <p class="time-line__mobile-stage">Main stage</p>
-            </div>
-          </li>
-          <li class="time-line__item time-line__item--right">
-       
-            <div class="time-line__musical-group-wrapper">
-              <p class="time-line__time-performance">22:15 - 23:45</p>
-              <p class="time-line__music-group">The Will Destroy You</p>
-              <p class="time-line__official-cite">
-                <a href="#">Integrantes</a>
-              </p>
-              <p class="time-line__mobile-stage">Other stage</p>
-            </div>
-          </li>
-
-          <li class="time-line__item time-line__item--left">
-           
-            <div class="time-line__musical-group-wrapper">
-              <p class="time-line__time-performance">22:15 - 23:45</p>
-              <p class="time-line__music-group">Three Silver Mount Zion</p>
-              <p class="time-line__official-cite">
-                <a href="#">Integrantes</a>
-              </p>
-              <p class="time-line__mobile-stage">Main stage</p>
-            </div>
-          </li>
-          <li class="time-line__item time-line__item--right">
-           
-            <div class="time-line__musical-group-wrapper">
-              <p class="time-line__time-performance">22:15 - 23:45</p>
-              <p class="time-line__music-group">Goodspeed You!</p>
-              <p class="time-line__official-cite">
-                <a href="#">Integrantes</a>
-              </p>
-              <p class="time-line__mobile-stage">Other stage</p>
-            </div>
-          </li>
-
-          <li class="time-line__item time-line__item--left">
-           
-            <div class="time-line__musical-group-wrapper">
-              <p class="time-line__time-performance">22:15 - 23:45</p>
-              <p class="time-line__music-group">God Is An Astronaut</p>
-              <p class="time-line__official-cite">
-                <a href="#">Integrantes</a>
-              </p>
-              <p class="time-line__mobile-stage">Main stage</p>
-            </div>
-          </li>
-          <li class="time-line__item time-line__item--right">
-          
-            <div class="time-line__musical-group-wrapper">
-              <p class="time-line__time-performance">22:15 - 23:45</p>
-              <p class="time-line__music-group">Tides from Numbula</p>
-              <p class="time-line__official-cite">
-                <a href="#">Integrantes</a>
-              </p>
-              <p class="time-line__mobile-stage">Other stage</p>
-            </div>
-          </li>
-          <li class="time-line__item time-line__item--left">
-            
-            <div class="time-line__musical-group-wrapper">
-              <p class="time-line__time-performance">22:15 - 23:45</p>
-              <p class="time-line__music-group">65 Days Of Static</p>
-              <p class="time-line__official-cite">
-                <a href="#">Integrantes</a>
-              </p>
-              <p class="time-line__mobile-stage">Main stage</p>
-            </div>
-          </li>
-          <li class="time-line__item time-line__item--right">
-           
-            <div class="time-line__musical-group-wrapper">
-              <p class="time-line__time-performance">22:15 - 23:45</p>
-              <p class="time-line__music-group">Maybeshewill</p>
-              <p class="time-line__official-cite">
-                <a href="#">Integrantes</a>
-              </p>
-              <p class="time-line__mobile-stage">Other stage</p>
-            </div>
-          </li>
-          <li class="time-line__item time-line__item--left">
-          
-            <div class="time-line__musical-group-wrapper">
-              <p class="time-line__time-performance">22:15 - 23:45</p>
-              <p class="time-line__music-group">El Ten Eleven</p>
-              <p class="time-line__official-cite">
-                <a href="#">Integrantes</a>
-              </p>
-              <p class="time-line__mobile-stage">Escenario 1</p>
-            </div>
-          </li>
-          <li class="time-line__item time-line__item--right">
-            
-            <div class="time-line__musical-group-wrapper">
-              <p class="time-line__time-performance">22:15 - 23:45</p>
-              <p class="time-line__music-group">Yundi Halda</p>
-              <p class="time-line__official-cite">
-                <a href="#">Integrantes</a>
-              </p>
-              <p class="time-line__mobile-stage">Escenario 2</p>
-            </div>
-          </li>
-          <li class="time-line__item time-line__item--left">
-           
-            <div class="time-line__musical-group-wrapper">
-              <p class="time-line__time-performance">22:15 - 23:45</p>
-              <p class="time-line__music-group">I Love Trains</p>
-              <p class="time-line__official-cite">
-                <a href="#">Integrantes</a>
-              </p>
-              <p class="time-line__mobile-stage">Escenario 1</p>
-            </div>
-          </li>
-          <li class="time-line__item time-line__item--right">
-           
-            <div class="time-line__musical-group-wrapper">
-              <p class="time-line__time-performance">22:15 - 23:45</p>
-              <p class="time-line__music-group">Errors</p>
-              <p class="time-line__official-cite">
-                <a href="#">Integrantes</a>
-              </p>
-              <p class="time-line__mobile-stage">Escenario 2</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer">
-      <p class="footer__copyright">ORT ART 2024.</p>
-    </div>
-    
-    <script src="./scripts/bundle.js"></script>
-  </body>
-</html> -->

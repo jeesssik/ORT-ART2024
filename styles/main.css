@@ -896,18 +896,22 @@ template {
 }
 body {
   scroll-behavior: smooth;
+
+
+  /* 
+  
   background-image: -webkit-gradient(
     linear,
     right top,
     left bottom,
-    from(#ff007f), /* Rosa vibrante */
-    color-stop(#ff00e5), /* Rosa neón */
-    color-stop(#00d4ff), /* Azul claro */
-    color-stop(#00bfff), /* Azul brillante */
-    color-stop(#00ff80), /* Verde neón */
-    color-stop(#ffcc00), /* Amarillo neón */
-    color-stop(#ff3300), /* Rojo intenso */
-    to(#ff007f) /* Vuelve al rosa vibrante */
+    from(#ff007f),
+    color-stop(#ff00e5), 
+    color-stop(#00d4ff), 
+    color-stop(#00bfff),
+    color-stop(#00ff80), 
+    color-stop(#ffcc00), 
+    color-stop(#ff3300), 
+    to(#ff007f) 
 );
 background-image: -webkit-linear-gradient(
     right top,
@@ -941,6 +945,6 @@ background-image: linear-gradient(
     #ffcc00,
     #ff3300,
     #ff007f
-);
+); */
 
 }
