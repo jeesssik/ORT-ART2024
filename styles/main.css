@@ -952,11 +952,15 @@ background-image: linear-gradient(
 .sticky {
   position: sticky;
   top: 0;
-  background-color: #000000; /* Fondo para que el texto sea visible */
+  background-color: rgba(0, 0, 0, 0); 
   padding: 10px 0;
   z-index: 1000;
+ 
+  transition: background-color 0.3s;
 }
-
+.sticky-sentinel {
+  height: 1px; /* Sentinela para detectar la posición de sticky */
+}
 .road-map, .time-line {
   overflow: visible; /* Importante para que sticky funcione */
 }

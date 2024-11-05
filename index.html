@@ -1,55 +1,57 @@
-
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <title>ORT ART FESTIVAL</title>
-  <link rel="stylesheet" href="./styles/main.css" />
-  <link rel="stylesheet" href="./styles/background.css" />
-  <script>
-    window.onload = function () {
-      fetchTSV();
-    };
+  <head>
+    <meta charset="UTF-8" />
+    <title>ORT ART FESTIVAL</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/background.css" />
+    <script>
+      window.onload = function () {
+        fetchTSV();
+      };
 
-    window.addEventListener("popstate", function () {
-      fetchTSV();
-    });
+      window.addEventListener("popstate", function () {
+        fetchTSV();
+      });
 
-    const tsvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSjnbBRIf-mixn33CJ7u1fE2A7EtOVjWHaMulbUa58joEiCMqoVJBM0wKXsp39UQTTtwr3MDRhVo_75/pub?output=tsv";
+      const tsvUrl =
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vSjnbBRIf-mixn33CJ7u1fE2A7EtOVjWHaMulbUa58joEiCMqoVJBM0wKXsp39UQTTtwr3MDRhVo_75/pub?output=tsv";
 
-    async function fetchTSV() {
-      try {
-        const response = await fetch(tsvUrl);
-        const data = await response.text();
-        let rows = data.split("\n").map((line) => line.split("\t"));
-        rows = rows.slice(1); // Eliminamos la primera fila (cabeceras)
+      async function fetchTSV() {
+        try {
+          const response = await fetch(tsvUrl);
+          const data = await response.text();
+          let rows = data.split("\n").map((line) => line.split("\t"));
+          rows = rows.slice(1); // Eliminamos la primera fila (cabeceras)
 
-        const bands = rows.map((row) => ({
-          banda: row[0],
-          escenario: row[1],
-          horario: row[2],
-        }));
+          const bands = rows.map((row) => ({
+            banda: row[0],
+            escenario: row[1],
+            horario: row[2],
+          }));
 
-        renderBands(bands);
-        console.log("Bandas:", bands);
-      } catch (error) {
-        console.error("Error al cargar los datos:", error);
+          renderBands(bands);
+          console.log("Bandas:", bands);
+        } catch (error) {
+          console.error("Error al cargar los datos:", error);
+        }
       }
-    }
 
-    function renderBands(bands) {
-      // Seleccionamos la lista principal
-      const timeLineList = document.querySelector(".time-line__list");
-      timeLineList.innerHTML = ""; // Limpiamos el contenido existente
+      function renderBands(bands) {
+        // Seleccionamos la lista principal
+        const timeLineList = document.querySelector(".time-line__list");
+        timeLineList.innerHTML = ""; // Limpiamos el contenido existente
 
-      bands.forEach((band) => {
-        const item = document.createElement("li");
-        item.classList.add(
-          "time-line__item",
-          "time-line__item--view",
-          band.escenario === "1" ? "time-line__item--left" : "time-line__item--right"
-        );
+        bands.forEach((band) => {
+          const item = document.createElement("li");
+          item.classList.add(
+            "time-line__item",
+            "time-line__item--view",
+            band.escenario === "1"
+              ? "time-line__item--left"
+              : "time-line__item--right"
+          );
 
-        item.innerHTML = `
+          item.innerHTML = `
           <div class="time-line__musical-group-wrapper">
             <p class="time-line__time-performance">${band.horario}</p>
             <p class="time-line__music-group">${band.banda}</p>
@@ -58,43 +60,72 @@
           </div>
         `;
 
-        // Añadimos el elemento a la lista general
-        timeLineList.appendChild(item);
-      });
-    }
-  </script>
+          // Añadimos el elemento a la lista general
+          timeLineList.appendChild(item);
+        });
+      }
 
-</head>
-<body >
-  <div class="fixed-background"></div>
+      document.addEventListener("DOMContentLoaded", () => {
+  const stickyElement = document.querySelector('.sticky');
+  const sentinel = document.querySelector('.sticky-sentinel');
 
-  <div class="fixed-background"></div>
-  <div class="content">
-  <div class="header content ">
-    <div class="header__wrapper">
-      <p class="header__title" data-text="ORT ART">ORT ART</p>
-      <p class="header__date">7 de Noviembre</p>
-    </div>
-  </div>
-  <div class="road-map">
-    <div class="time-line">
-      <div class="time-line__header sticky">
-        <span class="time-line__stage time-line__stage--left ">Escenario Acústico</span>
-        <span class="time-line__stage time-line__stage--right ">Escenario Eléctrico</span>
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (!entry.isIntersecting) {
+        // Cambia el fondo a negro cuando el sticky alcanza el borde superior
+        stickyElement.style.backgroundColor = "rgba(0, 0, 0, 1)";
+      } else {
+        // Cambia el fondo a transparente cuando el sticky no está en la parte superior
+        stickyElement.style.backgroundColor = "rgba(0, 0, 0, 0)";
+      }
+    },
+    { threshold: 0.1 } // Observa cuando el sticky-sentinel apenas sale de la vista
+  );
+
+  observer.observe(sentinel);
+});
+
+
+
+
+
+
+
+    </script>
+  </head>
+  <body>
+    <div class="fixed-background"></div>
+
+    <div class="fixed-background"></div>
+    <div class="content">
+      <div class="header content">
+        <div class="header__wrapper">
+          <p class="header__title" data-text="ORT ART">ORT ART</p>
+          <p class="header__date">7 de Noviembre</p>
+        </div>
       </div>
+      <div class="road-map">
+        <div class="time-line">
+          <div class="sticky-sentinel"></div>
+          <div class="time-line__header sticky">
+            <span class="time-line__stage time-line__stage--left"
+              >Escenario Acústico</span
+            >
+            <span class="time-line__stage time-line__stage--right"
+              >Escenario Eléctrico</span
+            >
+          </div>
 
-      <div class="time-line__container">
-        <!-- Una única lista general para ambos escenarios -->
-        <ul class="time-line__list"></ul>
+          <div class="time-line__container">
+            <!-- Una única lista general para ambos escenarios -->
+            <ul class="time-line__list"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <p class="footer__copyright">...</p>
       </div>
     </div>
-  </div>
-  <div class="footer">
-    <p class="footer__copyright"> ...</p>
-  </div>
-  </div>
-  <script src="./scripts/bundle.js"></script>
-
-</body>
+    <script src="./scripts/bundle.js"></script>
+  </body>
 </html>
-
