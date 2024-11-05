@@ -29,12 +29,12 @@
           horario: row[2],
         }));
 
-    console.log(bands); // Mostramos en consola las bandas
-   // renderBands(bands); // Llamamos a la función para renderizar en el HTML
-  } catch (error) {
-    console.error("Error al cargar los datos:", error);
-  }
-}
+        renderBands(bands);
+        console.log("Bandas:", bands);
+      } catch (error) {
+        console.error("Error al cargar los datos:", error);
+      }
+    }
 
     function renderBands(bands) {
       // Seleccionamos la lista principal
@@ -68,7 +68,7 @@
 
 </head>
 <body >
-
+  <div class="fixed-background"></div>
 
   <div class="fixed-background"></div>
   <div class="content">
