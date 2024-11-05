@@ -948,3 +948,15 @@ background-image: linear-gradient(
 ); */
 
 }
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #000000; /* Fondo para que el texto sea visible */
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.road-map, .time-line {
+  overflow: visible; /* Importante para que sticky funcione */
+}
